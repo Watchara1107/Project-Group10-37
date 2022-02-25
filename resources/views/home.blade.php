@@ -1,0 +1,58 @@
+@extends('layouts.admin.master')
+
+@section('content')
+<header class="bg-white shadow-sm px-4 py-3 z-index-20">
+    <div class="container-fluid px-0">
+      <h2 class="mb-0 p-1">Dashboard</h2>
+    </div>
+  </header>
+          <section class="pb-0">
+            <div class="container-fluid">
+              <div class="card mb-0">
+                <div class="card-body">
+                  <div class="row gx-5 bg-white">
+                    <!-- Item -->
+                    <div class="col-xl-6 col-sm-6 py-4 border-lg-end border-gray-200">
+                      <div class="d-flex align-items-center">
+                        <div class="icon flex-shrink-0 bg-violet">
+                          <svg class="svg-icon svg-icon-sm svg-icon-heavy">
+                            <use xlink:href="#user-1"> </use>
+                          </svg>
+                        </div>
+                        <div class="mx-4">
+                          <h6 class="h4 fw-light text-gray-600 mb-3">จำนวน<br>User</h6>
+                          <div class="progress" style="height: 4px">
+                            <div class="progress-bar bg-violet" role="progressbar" style="width: 25%; height: 4px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                        </div>
+                        <div class="number"><strong class="text-lg">{{ $user->count() }} User</strong></div>
+                      </div>
+                    </div>
+                    <!-- Item -->
+                    <div class="col-xl-5 col-sm-6 py-4 border-lg-end border-gray-200">
+                      <div class="d-flex align-items-center">
+                        <div class="icon flex-shrink-0 bg-red">
+                          <svg class="svg-icon svg-icon-sm svg-icon-heavy">
+                            <use xlink:href="#survey-1"> </use>
+                          </svg>
+                        </div>
+                        <div class="mx-4">
+                          <h6 class="h4 fw-light text-gray-600 mb-3">จำนวน<br>สินค้า</h6>
+                          <div class="progress" style="height: 4px">
+                            <div class="progress-bar bg-red" role="progressbar" style="width: 70%; height: 4px;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                        </div>
+                        <div class="number"><strong class="text-lg">{{ $product->count() }} รายการ</strong></div>
+                      </div>
+                    </div>
+                    <!-- Item -->
+
+
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+@endsection
